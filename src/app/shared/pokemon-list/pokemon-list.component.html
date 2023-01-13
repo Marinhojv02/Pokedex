@@ -1,0 +1,23 @@
+<app-seach-bar></app-seach-bar>
+
+<section class="listaPokemons">
+  <ng-template ngFor let-pokemon [ngForOf]='pokemonList'>
+    <a [routerLink]="['pokemon', pokemon.status.id]" routerLinkActive="router-link-active"  class="pokemon" *ngIf="pokemon.status">
+      <section class="pokemon-status">
+        <h2>
+          {{pokemon.name}}
+        </h2>
+        <ul>
+          <li *ngFor="let type of pokemon.status.types">
+            {{type.type.name}}
+          </li>
+        </ul>
+      </section>
+      <section class="pokemon-img">
+        <img [src]="pokemon.status.sprites.front_default">
+      </section>
+    </a>
+  </ng-template>
+
+</section>
+

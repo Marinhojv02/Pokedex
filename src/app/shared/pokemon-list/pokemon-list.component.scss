@@ -1,0 +1,73 @@
+@import '../../../config-scss/variables.scss';
+
+
+:host{
+  .listaPokemons{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+
+    .pokemon{
+      position: relative;
+      margin-bottom: 10px;
+
+      width: 42%;
+      height: 110px;
+      background: $branco;
+      border-radius: 10px;
+      padding: 20px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      text-decoration: none;
+      color: $primary-color;
+
+      .pokemon-status{
+        h2{
+          font-size: 22px;
+          font-style: italic;
+          font-weight: 700;
+
+          margin-bottom: 10px;
+        }
+        ul{
+          display: flex;
+          flex-direction: column;
+          li{
+            border-radius: 32px;
+            background: #EFEFEF;
+
+            font-size: 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-width: 60px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+      .pokemon-img{
+
+        display: flex;
+        justify-content: center;
+
+        width: 110px;
+        height: 90px;
+
+        background: url('../../../assets/images/Bolinhas.svg') no-repeat;
+
+        img{
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+}
